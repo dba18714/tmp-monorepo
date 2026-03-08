@@ -1,0 +1,16 @@
+{
+  "name": "pnpm-workspace-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @demo/shared dev\" \"pnpm --filter @demo/api dev\" \"pnpm --filter @demo/web dev\"",
+    "build": "pnpm --filter @demo/shared build && pnpm --filter @demo/api build && pnpm --filter @demo/web build",
+    "build:shared": "pnpm --filter @demo/shared build",
+    "dev:api": "pnpm --filter @demo/api dev",
+    "dev:web": "pnpm --filter @demo/web dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}

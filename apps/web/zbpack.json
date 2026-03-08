@@ -1,0 +1,5 @@
+{
+  "build_command": "pnpm --filter @demo/shared build && pnpm --filter @demo/web build",
+  "output_dir": "apps/web/dist",
+  "node_version": "20"
+}
